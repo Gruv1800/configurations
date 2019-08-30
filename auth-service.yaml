@@ -1,5 +1,7 @@
 server:
   port: 9999
+  servlet:
+    context-path: /api
 spring:
   application:
     name: auth-service
@@ -8,8 +10,13 @@ spring:
     username: sa
     password: password
 #    driver-class-name: com.h2.Driver
+    data: classpath:/db/oauth2.sql
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
   h2:
     console:
       enabled: true
