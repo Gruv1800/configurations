@@ -13,6 +13,4 @@ spring:
   h2:
     console:
       enabled: true
-  datasource:
-    data: classpath:oauth2.sql
 check-user-scopes: true
